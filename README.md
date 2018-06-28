@@ -2,7 +2,11 @@
 bulk test api's
 
 
-## to run
-place the sample request and responses in the directory
+## Run
 
-python run.py
+Place the sample request and responses in the directory
+
+To run 
+```sh
+$ python run.py
+```
