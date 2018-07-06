@@ -2,7 +2,7 @@ import json
 import os
 import requests
 
-url          = "https://jsonplaceholder.typicode.com/posts/1"
+request_url          = "https://jsonplaceholder.typicode.com/posts/1"
 response_dir = r"responses"
 request_dir  = r"requests"
 
@@ -24,7 +24,7 @@ for file in os.listdir(os.fsencode(request_dir)):
         # continue
     # else:
         # continue
-    resp = json.loads(requests.get(url).text)
+    resp = json.loads(requests.get(request_url).text)
     print(resp)
     print(sort_dict(resp.items()))
     if sort_dict(resp.items()) == sort_dict(response.items()):
