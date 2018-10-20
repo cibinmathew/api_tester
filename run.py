@@ -2,9 +2,10 @@ import json
 import os
 import requests
 
-request_url          = "https://jsonplaceholder.typicode.com/posts/1"
+request_url = "https://jsonplaceholder.typicode.com/posts/1"
 response_dir = r"responses"
-request_dir  = r"requests"
+request_dir = r"requests"
+
 
 def sort_dict(obj):
     if isinstance(obj, dict):
@@ -14,16 +15,17 @@ def sort_dict(obj):
     else:
         return obj
 
+
 for file in os.listdir(os.fsencode(request_dir)):
     filename = os.fsdecode(file)
     # if filename.endswith(".asm") or filename.endswith(".py"):
     with open(os.path.join(response_dir, filename)) as f:
-        response= json.loads(f.read())
+        response = json.loads(f.read())
     with open(os.path.join(request_dir, filename)) as f:
-        request= f.read()
+        request = f.read()
         # continue
     # else:
-        # continue
+    # continue
     resp = json.loads(requests.get(request_url).text)
     print(resp)
     print(sort_dict(resp.items()))
