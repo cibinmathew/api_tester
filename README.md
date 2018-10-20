@@ -1,5 +1,11 @@
 # api_tester
 bulk test api's
+## Features
+* picks all inputs from requests directory
+
+## TODO
+* report
+* support multiple API
 
 
 ## Run
