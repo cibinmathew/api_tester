@@ -1,5 +1,5 @@
 # api_tester
-bulk test api's
+bulk test api's similar to postman 
 ## Features
 * picks all inputs from requests directory
 
